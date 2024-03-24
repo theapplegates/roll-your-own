@@ -12,7 +12,7 @@ function loadImage(picture) {
 
   var sources = picture.children;
   var loadingPath = "images/tiny";
-  var sizes = ["large","medium","small"];
+  var sizes = ["largest","large","medium","small","smallest"];
 
   for(var s=0; s<sources.length; s++) {
     // update the src or srcset urls

@@ -7,5 +7,3 @@ module.exports = (url, alt = "Missing alt text") => {
   <source srcset="/images/tiny/${url}" media="(min-width: 740px)">
   <img src="/images/tiny/${url}" alt="${alt}" /></picture>`;
 };
-
-

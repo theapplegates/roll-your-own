@@ -15,6 +15,38 @@ Take a look at [the code on GitHub]({{ pkg.repository.url }}), or read on, for m
 {%- endfor -%}
 </section >
 
+{% set somePhotos = [
+  {url: "A210288_large.jpg", credit: "AUDI AG", creditURL: "https://www.audi-mediacenter.com/en/audi-rs-e-tron-gt-13660"}
+] %}
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "A beautiful Audi car" %}
+{%- endfor -%}
+</section >
+
+
+{% set somePhotos = [
+  {url: "resting-dog.jpg", credit: "Me", creditURL: "https://paulapplegate.com"}
+] %}
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "A resting dog" %}
+{%- endfor -%}
+</section >
+
+{% set somePhotos = [
+  {url: "Grandma.jpg", credit: "Me", creditURL: "https://paulapplegate.com"}
+] %}
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "My Grandmother" %}
+{%- endfor -%}
+</section >
+
+
 
 ## Image transformation
 

@@ -7,5 +7,3 @@ module.exports = (url, alt = "Missing alt text") => {
   <img src="/images/${url}?nf_resize=fit&w=500" alt="${alt}" />
 </picture>`;
 };
-
-
