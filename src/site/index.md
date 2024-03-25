@@ -2,6 +2,16 @@
 title: Roll your own lazy loading
 layout: default
 ---
+Considering there is just the two of us, we have a lot of connected devices on our network.
+{% set somePhotos = [
+  {url: "NetworkClients.png", credit: "Me", creditURL: "https://paulapplegate.com"}
+] %}
+<section class="post-teaser">
+{%- for photo in somePhotos %}
+  <div class="credit">By <a href="{{ photo.creditURL }}" target="_BLANK" rel="noopener"> {{ photo.credit }}</a>, (<a href="/images/original/{{ photo.url }}" target="_BLANK" rel="noopener">Original</a>)</div>
+  {% lazypicture photo.url, "Behold the beautiful network." %}
+{%- endfor -%}
+</section >
 
 Take a look at [the code on GitHub]({{ pkg.repository.url }}), or read on, for more explanation and examples.
 
